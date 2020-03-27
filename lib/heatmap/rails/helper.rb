@@ -94,8 +94,8 @@ $( document ).ready(function() {
   function sendRequest(coordinates_data){
     $.ajax({
       type:"post",
-      url: '/heat_map_points',
-      data: coordinates_data,
+      url: '/h/s',
+      data: JSON.stringify(coordinates_data),
       contentType: 'application/json',
       dataType: 'json'
     });

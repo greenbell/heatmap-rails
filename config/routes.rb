@@ -1,3 +1,4 @@
 Rails.application.routes.draw do
-  resources :heat_map_points
+  post 'h/s', controller: 'heat_map_points', action: 'create'
+  resources :heat_map_points, :only => "create"
 end
