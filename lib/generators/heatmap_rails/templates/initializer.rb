@@ -9,9 +9,11 @@ class CreateHeatMaps < ActiveRecord::Migration
 
       t.timestamps
     end
+    add_index :heat_maps, [:path, :click_type]
   end
 
   def self.down
+    remove_index :heat_maps, [:path, :click_type]
     drop_table :heat_maps
   end
 end
