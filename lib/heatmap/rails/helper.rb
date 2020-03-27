@@ -93,10 +93,11 @@ $( document ).ready(function() {
   };
   function sendRequest(coordinates_data){
     $.ajax({
-       method: "POST",
-       url: '/points',
-       data: coordinates_data,
-       dataType: 'application/json'
+      type:"post",
+      url: '/heat_map_points',
+      data: coordinates_data,
+      contentType: 'application/json',
+      dataType: 'json'
     });
   }
 });

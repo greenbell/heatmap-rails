@@ -1,3 +1,3 @@
 Rails.application.routes.draw do
-  resources :points
+  resources :heat_map_points
 end

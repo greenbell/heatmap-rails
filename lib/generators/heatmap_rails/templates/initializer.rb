@@ -1,5 +1,5 @@
-class CreateHeatMaps < ActiveRecord::Migration[5.1]
-  def change
+class CreateHeatMaps < ActiveRecord::Migration
+  def self.up
     create_table :heat_maps do |t|
       t.string :path
       t.string :click_type
@@ -9,5 +9,9 @@ class CreateHeatMaps < ActiveRecord::Migration[5.1]
 
       t.timestamps
     end
+  end
+
+  def self.down
+    drop_table :heat_maps
   end
 end
